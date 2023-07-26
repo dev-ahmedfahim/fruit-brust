@@ -1,11 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- daisyUi & tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Fruit Brust: An online based trusted fruit shop</title>
-</head>
-<body>
-    
-</body>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontAwsome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- css  -->
+    <style>
+      .primary-font{
+          font-family: font-family: 'Lato', sans-serif;;
+      }
+    </style>
+    <!-- tailwind custom classes  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="primary-font">
+    <header class="container mx-auto">
+        <!-- nav section started -->
+      <nav
+        class="lg:bg-[#F85559] lg:rounded-full lg:pr-14 lg:pl-14 py-3 mt-3 lg:mt-10"
+      >
+        <div class="navbar">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </label>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Home</a></li>
+                <li><a>About Us</a></li>
+                <li><a>Shop</a></li>
+                <li><a>All Fruits</a></li>
+              </ul>
+            </div>
+            <div class="hidden lg:flex">
+              <ul
+                class="lg:text-white lg:text-xl font-normal menu menu-horizontal px-1"
+              >
+                <li><a>Home</a></li>
+                <li><a>About Us</a></li>
+                <li><a>Shop</a></li>
+                <li><a>All Fruits</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class=" navbar-center flex items-center">
+            <div><img src="./images/logo.png" alt="" /></div>
+            <h2 class="text-black lg:text-white text-2xl lg:text-4xl font-bold">
+              Fruit Brust
+            </h2>
+          </div>
+          <div class=" invisible md:visible navbar-end lg:relative">
+            <div>
+              <input
+                type="search"
+                placeholder="search here.."
+                class="rounded-full p-3 w-60 focus:outline-none border-none"
+              />
+              <i
+                class="fas fa-search absolute top-1/2 right-3 transform -translate-y-1/2"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- banner section started -->
+<!-- banner section started -->
+<section class="mt-12">
+    <div class="carousel w-full">
+
+        <!-- slide 1 -->
+        <div id="slide1" class="carousel-item relative w-full">
+            <div class="hero" style="background-image: url(./images/banner1.png);">
+                <div class="hero-overlay bg-opacity-50"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-md">
+                    <h1 class="text-white mb-5 text-2xl lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                    <p class="mb-5 text-xs lg:text-base ">We supply high quality organic Fruits</p>
+                    <button class="btn border-none w-17 bg-[#F85559]">Order Now</button>
+                  </div>
+                </div>
+              </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" class="btn btn-circle">❮</a> 
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+
+        <!-- slide 2 -->
+        <div id="slide2" class="carousel-item relative w-full">
+            <div class="hero" style="background-image: url(./images/banner2.png);">
+                <div class="hero-overlay bg-opacity-50"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-md">
+                    <h1 class="text-white mb-5 text-2xl lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                    <p class="mb-5 text-xs lg:text-base ">We supply high quality organic Fruits</p>
+                    <button class="btn border-none w-17 bg-[#F85559]">Order Now</button>
+                  </div>
+                </div>
+              </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a> 
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+
+         <!--slide 3  -->
+        <div id="slide3" class="carousel-item relative w-full">
+            <div class="hero" style="background-image: url(./images/banner3.png);">
+                <div class="hero-overlay bg-opacity-50"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-md">
+                    <h1 class="text-white mb-5 text-2xl lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                    <p class="mb-5 text-xs lg:text-base ">We supply high quality organic Fruits</p>
+                    <button class="btn border-none w-17 bg-[#F85559]">Order Now</button>
+                  </div>
+                </div>
+              </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a> 
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+
+        <!-- slide 4 -->
+        <div id="slide4" class="carousel-item relative w-full">
+            <div class="hero">
+                <img src="/images/banner4.png" class="w-full" />
+            <div class="hero-overlay bg-opacity-50"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-md">
+                <h1 class="text-white mb-5 text-2xl lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                <p class="mb-5 text-xs lg:text-base ">We supply high quality organic Fruits</p>
+                <button class="btn border-none w-17 bg-[#F85559]">Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle">❮</a> 
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- food badge section -->
+  <section class="invisible md:visible lg:shadow-2xl lg:w-4/5 lg:m-auto lg:relative lg:-mt-16 lg:bg-white">
+    <div class="flex justify-evenly items-center">
+        <div><img src="./images/fruit1.png" alt="">
+        <p class="text-center font-medium">Redberry</p></div>
+        <div><img src="./images/fruit2.png" alt="">
+        <p class="text-center font-medium">Orange</p></div>
+        <div><img src="./images/fruit3.png" alt="">
+        <p class="text-center font-medium">Mango</p></div>
+        <div><img src="./images/fruit4.png" alt="">
+        <p class="text-center font-medium">Strawberry</p></div>
+        <div><img src="./images/fruit5.png" alt="">
+        <p class="text-center font-medium">pomegranate</p></div>
+
+    </div>
+  </section>
+  
+</header>
+      
+      
+
+    <main class="container mx-auto">
+        <!--deals of the day section  -->
+        <section >
+            <div class="flex flex-col md:flex-row md:flex justify-between items-center md:w-full mt-7 md:mt-14">
+                <div>
+                    <h3 class="text-center md:text-left text-2xl lg:text-3xl font-extrabold mb-6 md:mb-6">Deal of the day</h3>
+                    <p class="font-medium text-center md:text-left md:w-1/2 mb-7">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                </div>
+                <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                    <div class="flex flex-col">
+                      <span class="countdown font-mono text-5xl">
+                        <span style="--value:15;"></span>
+                      </span>
+                      days
+                    </div> 
+                    <div class="flex flex-col">
+                      <span class="countdown font-mono text-5xl">
+                        <span style="--value:10;"></span>
+                      </span>
+                      hours
+                    </div> 
+                    <div class="flex flex-col">
+                      <span class="countdown font-mono text-5xl">
+                        <span style="--value:24;"></span>
+                      </span>
+                      min
+                    </div> 
+                    <div class="flex flex-col">
+                      <span class="countdown font-mono text-5xl">
+                        <span style="--value:33;"></span>
+                      </span>
+                      sec
+                    </div>
+                  </div>
+            </div>
+            <!-- card -->
+            <div class="mt-5 md:mt-9 flex flex-col md:flex-row w-full gap-4">
+                <!-- card 1 -->
+                <div class="card flex-1 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="/images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title text-2xl font-bold">12.90$ - 18.85$</h2>
+                      <p class="font-semibold">Apple</p> 
+                      <div class="mt-2 card-actions">
+                        <button class="btn text-[#F85559] ">Details</button>
+                      </div>
+                    </div>
+                </div>
+            
+            <div>
+                <!-- card 2 -->
+                <div class="card flex-1 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="/images/fruit7.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title text-2xl font-bold">12.90$ - 18.85$</h2>
+                      <p class="font-semibold">Apple</p> 
+                      <div class="mt-2 card-actions">
+                        <button class="btn text-[#F85559] ">Details</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div>
+                <!-- card 3 -->
+                <div class="card flex-1 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="/images/fruit8.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title text-2xl font-bold">12.90$ - 18.85$</h2>
+                      <p class="font-semibold">Apple</p> 
+                      <div class="mt-2 card-actions">
+                        <button class="btn text-[#F85559] ">Details</button>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div>
+                    <!-- card 4 -->
+                    <div class="card flex-1 bg-base-100 shadow-xl">
+                        <figure class="px-10 pt-10">
+                          <img src="/images/fruit9.png" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                          <h2 class="card-title text-2xl font-bold">12.90$ - 18.85$</h2>
+                          <p class="font-semibold">Apple</p> 
+                          <div class="mt-2 card-actions">
+                            <button class="btn text-[#F85559] ">Details</button>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+            <div class="mt-5 md:mt-10  flex justify-center items-center">
+                <div><button class="btn bg-[#F85559] border-none">Shop Now</button></div>
+            </div>
+        </section>
+        <!-- team section -->
+        <section>
+            <div class="hero min-h-screen" style="background-image: url(./images/team.png);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                    <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <button class="btn btn-primary">Get Started</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+    <footer></footer>
+  </body>
 </html>
